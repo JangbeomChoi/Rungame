@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public static float globalSpeed;
     public static float score;
     public static bool isLive;
+    public GameObject uiOver;
 
     void Start()
     {
@@ -16,10 +17,16 @@ public class GameManager : MonoBehaviour
     }
     void Update()
     {
-        if (isLive)
-        {
-            score += Time.deltaTime * 2;
-            globalSpeed = ORIGIN_SPEED + score * 0.01f;
-        }
+        if (!isLive)
+            return;
+        
+        score += Time.deltaTime * 2;
+        globalSpeed = ORIGIN_SPEED + score * 0.01f;
+         
+    }
+    public void GameOver()
+    {
+        //uiOver.SetActive(true);
+        isLive = false;
     }
 }

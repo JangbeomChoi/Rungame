@@ -16,7 +16,10 @@ public class Scroller : MonoBehaviour
     
     void Update()
     {
-        float totalSpeed = GameManager.globalSpeed * speedRate * Time.deltaTime * -1f;
-        transform.Translate(totalSpeed, 0, 0);
+        if (GameManager.isLive)
+        {
+            float totalSpeed = GameManager.globalSpeed * speedRate * Time.deltaTime * -1f;
+            transform.Translate(totalSpeed, 0, 0);
+        }
     }
 }

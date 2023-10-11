@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class Player : MonoBehaviour
 {
@@ -14,7 +15,9 @@ public class Player : MonoBehaviour
     public float startJumpPower;
     public float jumpPower;
     public bool isGround;
-    private bool isJumpKey;
+    public bool isJumpKey;
+    public UnityEvent onHit;
+
     Rigidbody2D rb;
     Animator anim;
     
@@ -29,6 +32,9 @@ public class Player : MonoBehaviour
     
     void Update()
     {
+        if (!GameManager.isLive)
+            return;
+
         if (Input.GetButtonDown("Jump") && isGround)
         {
             rb.AddForce(Vector2.up * startJumpPower, ForceMode2D.Impulse);            
@@ -39,6 +45,9 @@ public class Player : MonoBehaviour
     }
     void FixedUpdate()
     {
+        if (!GameManager.isLive)
+            return;
+
         if (isJumpKey && !isGround)
         {
             jumpPower = Mathf.Lerp(jumpPower, 0, 0.1f);
@@ -64,7 +73,7 @@ public class Player : MonoBehaviour
     {
         rb.simulated = false;
         ChangeAnim(State.Hit);
-
+        onHit.Invoke();
     }
     void ChangeAnim(State state)
     {
