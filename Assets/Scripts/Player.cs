@@ -20,6 +20,7 @@ public class Player : MonoBehaviour
 
     Rigidbody2D rb;
     Animator anim;
+    Sounder sound;
     
 
     void Awake()
@@ -27,9 +28,14 @@ public class Player : MonoBehaviour
         //√ ±‚»≠
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        sound = GetComponent<Sounder>();
+    }
+    void Start()
+    {
+        sound.PlaySound(Sounder.Sfx.Reset);
     }
 
-    
+
     void Update()
     {
         if (!GameManager.isLive)
@@ -40,7 +46,7 @@ public class Player : MonoBehaviour
             rb.AddForce(Vector2.up * startJumpPower, ForceMode2D.Impulse);            
         }
 
-        isJumpKey = Input.GetButton("Jump") || Input.GetMouseButtonDown(0);
+        isJumpKey = Input.GetButton("Jump") || Input.GetMouseButton(0);
        
     }
     void FixedUpdate()
@@ -59,6 +65,7 @@ public class Player : MonoBehaviour
         if(!isGround) 
         {
             ChangeAnim(State.Run);
+            sound.PlaySound(Sounder.Sfx.Land);
             jumpPower = 1;
         }
         
@@ -67,12 +74,14 @@ public class Player : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision)
     {
         ChangeAnim(State.Jump);
+        sound.PlaySound(Sounder.Sfx.Jump);
         isGround = false;
     }
     void OnTriggerEnter2D(Collider2D collision)
     {
         rb.simulated = false;
         ChangeAnim(State.Hit);
+        sound.PlaySound(Sounder.Sfx.Hit);
         onHit.Invoke();
     }
     void ChangeAnim(State state)
