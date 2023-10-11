@@ -1,5 +1,4 @@
-using System.Collections;
-using System.Collections.Generic;
+
 using UnityEngine;
 
 public class Scroller : MonoBehaviour
@@ -12,7 +11,6 @@ public class Scroller : MonoBehaviour
     {
         count = transform.childCount;
     }
-
     
     void Update()
     {

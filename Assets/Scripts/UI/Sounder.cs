@@ -12,16 +12,16 @@ public class Sounder : MonoBehaviour
         Reset,
     }
     public AudioClip[] clips;
-    AudioSource audio;
+    AudioSource audios;
     
     void Awake()
     {
-        audio = GetComponent<AudioSource>();
+        audios = GetComponent<AudioSource>();
     }
     public void PlaySound(Sfx sfx)
     {
-        audio.clip = clips[(int)sfx];
-        audio.Play();
+        audios.clip = clips[(int)sfx];
+        audios.Play();
     }
 
    
