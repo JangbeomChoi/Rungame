@@ -64,6 +64,7 @@ GameObject:
   - component: {fileID: 1635366352541486112}
   - component: {fileID: 4526284116425376735}
   - component: {fileID: 1536332024183071546}
+  - component: {fileID: 37809303554032524}
   m_Layer: 0
   m_Name: Cloud
   m_TagString: Untagged
@@ -150,7 +151,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b844f9e248d2af4a8ca31edb97a84a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 0adb6a2221e53b444a38b74ff0ec0d40, type: 3}
+  - {fileID: 21300000, guid: 3c23e27d0ac589a4ea24a96e9406328d, type: 3}
+  - {fileID: 21300000, guid: 69c1d78d45e34f2468e6c4ca80bda329, type: 3}
+--- !u!114 &37809303554032524
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1655660042202403363}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311bb31b02e06354c89e8fe835fab45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4522599591375278156}
+        m_TargetAssemblyTypeName: ChangeSprite, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &1703515707025765057
 GameObject:
   m_ObjectHideFlags: 0
@@ -162,6 +193,7 @@ GameObject:
   - component: {fileID: 1792296420305227472}
   - component: {fileID: 2285631063184678875}
   - component: {fileID: 6704000224594813616}
+  - component: {fileID: 5969013520692925190}
   m_Layer: 0
   m_Name: Cloud (5)
   m_TagString: Untagged
@@ -248,7 +280,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b844f9e248d2af4a8ca31edb97a84a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 0adb6a2221e53b444a38b74ff0ec0d40, type: 3}
+  - {fileID: 21300000, guid: 3c23e27d0ac589a4ea24a96e9406328d, type: 3}
+  - {fileID: 21300000, guid: 69c1d78d45e34f2468e6c4ca80bda329, type: 3}
+--- !u!114 &5969013520692925190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1703515707025765057}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311bb31b02e06354c89e8fe835fab45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 6704000224594813616}
+        m_TargetAssemblyTypeName: ChangeSprite, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &2831185097632142686
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,6 +322,7 @@ GameObject:
   - component: {fileID: 7078764903503734932}
   - component: {fileID: 3888655786943242384}
   - component: {fileID: 7050649058644364322}
+  - component: {fileID: 1387732028138506360}
   m_Layer: 0
   m_Name: Cloud (3)
   m_TagString: Untagged
@@ -346,7 +409,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b844f9e248d2af4a8ca31edb97a84a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 0adb6a2221e53b444a38b74ff0ec0d40, type: 3}
+  - {fileID: 21300000, guid: 3c23e27d0ac589a4ea24a96e9406328d, type: 3}
+  - {fileID: 21300000, guid: 69c1d78d45e34f2468e6c4ca80bda329, type: 3}
+--- !u!114 &1387732028138506360
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2831185097632142686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311bb31b02e06354c89e8fe835fab45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7050649058644364322}
+        m_TargetAssemblyTypeName: ChangeSprite, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &3010622722207565310
 GameObject:
   m_ObjectHideFlags: 0
@@ -358,6 +451,7 @@ GameObject:
   - component: {fileID: 1096450422168005659}
   - component: {fileID: 1260094356433813440}
   - component: {fileID: 1082821963513822809}
+  - component: {fileID: 1992744586198149428}
   m_Layer: 0
   m_Name: Cloud (2)
   m_TagString: Untagged
@@ -444,7 +538,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b844f9e248d2af4a8ca31edb97a84a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 0adb6a2221e53b444a38b74ff0ec0d40, type: 3}
+  - {fileID: 21300000, guid: 3c23e27d0ac589a4ea24a96e9406328d, type: 3}
+  - {fileID: 21300000, guid: 69c1d78d45e34f2468e6c4ca80bda329, type: 3}
+--- !u!114 &1992744586198149428
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3010622722207565310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311bb31b02e06354c89e8fe835fab45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 1082821963513822809}
+        m_TargetAssemblyTypeName: ChangeSprite, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6224855894566981365
 GameObject:
   m_ObjectHideFlags: 0
@@ -456,6 +580,7 @@ GameObject:
   - component: {fileID: 2459662884562816373}
   - component: {fileID: 6535767810204931447}
   - component: {fileID: 4522599591375278156}
+  - component: {fileID: 1604075687159149681}
   m_Layer: 0
   m_Name: Cloud (6)
   m_TagString: Untagged
@@ -542,7 +667,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b844f9e248d2af4a8ca31edb97a84a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 0adb6a2221e53b444a38b74ff0ec0d40, type: 3}
+  - {fileID: 21300000, guid: 3c23e27d0ac589a4ea24a96e9406328d, type: 3}
+  - {fileID: 21300000, guid: 69c1d78d45e34f2468e6c4ca80bda329, type: 3}
+--- !u!114 &1604075687159149681
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6224855894566981365}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311bb31b02e06354c89e8fe835fab45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 4522599591375278156}
+        m_TargetAssemblyTypeName: ChangeSprite, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &6243656351894633751
 GameObject:
   m_ObjectHideFlags: 0
@@ -554,6 +709,7 @@ GameObject:
   - component: {fileID: 2705641263238593061}
   - component: {fileID: 2974473011569885579}
   - component: {fileID: 2491393402429018999}
+  - component: {fileID: 6120515970111996811}
   m_Layer: 0
   m_Name: Cloud (4)
   m_TagString: Untagged
@@ -640,7 +796,37 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b844f9e248d2af4a8ca31edb97a84a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 0adb6a2221e53b444a38b74ff0ec0d40, type: 3}
+  - {fileID: 21300000, guid: 3c23e27d0ac589a4ea24a96e9406328d, type: 3}
+  - {fileID: 21300000, guid: 69c1d78d45e34f2468e6c4ca80bda329, type: 3}
+--- !u!114 &6120515970111996811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6243656351894633751}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311bb31b02e06354c89e8fe835fab45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 2491393402429018999}
+        m_TargetAssemblyTypeName: ChangeSprite, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!1 &8981092011196610323
 GameObject:
   m_ObjectHideFlags: 0
@@ -652,6 +838,7 @@ GameObject:
   - component: {fileID: 8076177899793565340}
   - component: {fileID: 5275117537592167721}
   - component: {fileID: 7069577704775883624}
+  - component: {fileID: 6288737442655074778}
   m_Layer: 0
   m_Name: Cloud (1)
   m_TagString: Untagged
@@ -738,4 +925,34 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b844f9e248d2af4a8ca31edb97a84a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  sprites: []
+  sprites:
+  - {fileID: 21300000, guid: 0adb6a2221e53b444a38b74ff0ec0d40, type: 3}
+  - {fileID: 21300000, guid: 3c23e27d0ac589a4ea24a96e9406328d, type: 3}
+  - {fileID: 21300000, guid: 69c1d78d45e34f2468e6c4ca80bda329, type: 3}
+--- !u!114 &6288737442655074778
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8981092011196610323}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 311bb31b02e06354c89e8fe835fab45a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  onMove:
+    m_PersistentCalls:
+      m_Calls:
+      - m_Target: {fileID: 7069577704775883624}
+        m_TargetAssemblyTypeName: ChangeSprite, Assembly-CSharp
+        m_MethodName: Change
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2

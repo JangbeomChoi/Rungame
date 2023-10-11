@@ -35,12 +35,12 @@ public class Player : MonoBehaviour
         if (!GameManager.isLive)
             return;
 
-        if (Input.GetButtonDown("Jump") && isGround)
+        if ((Input.GetButtonDown("Jump") || Input.GetMouseButtonDown(0)) && isGround)
         {
             rb.AddForce(Vector2.up * startJumpPower, ForceMode2D.Impulse);            
         }
 
-        isJumpKey = Input.GetButton("Jump");
+        isJumpKey = Input.GetButton("Jump") || Input.GetMouseButtonDown(0);
        
     }
     void FixedUpdate()

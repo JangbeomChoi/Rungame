@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour
 {
@@ -11,9 +12,12 @@ public class GameManager : MonoBehaviour
     public static bool isLive;
     public GameObject uiOver;
 
-    void Start()
+    void Awake()
     {
         isLive = true;
+
+        if (!PlayerPrefs.HasKey("Score"))
+            PlayerPrefs.SetFloat("Score", 0);
     }
     void Update()
     {
@@ -26,7 +30,16 @@ public class GameManager : MonoBehaviour
     }
     public void GameOver()
     {
-        //uiOver.SetActive(true);
+        uiOver.SetActive(true);
         isLive = false;
+
+        float highScore = PlayerPrefs.GetFloat("Score");
+        PlayerPrefs.SetFloat("Score", Mathf.Max(highScore, score));
+    }
+    public void Restart()
+    {
+        SceneManager.LoadScene("SampleScene");
+        score = 0;
+        isLive = true;
     }
 }
