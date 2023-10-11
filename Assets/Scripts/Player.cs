@@ -14,9 +14,10 @@ public class Player : MonoBehaviour
     public float startJumpPower;
     public float jumpPower;
     public bool isGround;
-
+    private bool isJumpKey;
     Rigidbody2D rb;
     Animator anim;
+    
 
     void Awake()
     {
@@ -28,18 +29,28 @@ public class Player : MonoBehaviour
     
     void Update()
     {
-        if (Input.GetButtonDown("Jump"))
+        if (Input.GetButtonDown("Jump") && isGround)
         {
-            rb.AddForce(Vector2.up * startJumpPower, ForceMode2D.Impulse);
-            
+            rb.AddForce(Vector2.up * startJumpPower, ForceMode2D.Impulse);            
+        }
+
+        isJumpKey = Input.GetButton("Jump");
+       
+    }
+    void FixedUpdate()
+    {
+        if (isJumpKey && !isGround)
+        {
+            jumpPower = Mathf.Lerp(jumpPower, 0, 0.1f);
+            rb.AddForce(Vector2.up * jumpPower, ForceMode2D.Impulse);
         }
     }
-
     void OnCollisionStay2D(Collision2D collision)
     {
         if(!isGround) 
         {
             ChangeAnim(State.Run);
+            jumpPower = 1;
         }
         
         isGround = true;
@@ -49,8 +60,15 @@ public class Player : MonoBehaviour
         ChangeAnim(State.Jump);
         isGround = false;
     }
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        rb.simulated = false;
+        ChangeAnim(State.Hit);
+
+    }
     void ChangeAnim(State state)
     {
         anim.SetInteger("State", (int)state);
     }
 }
+
